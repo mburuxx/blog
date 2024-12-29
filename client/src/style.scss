@@ -82,7 +82,8 @@ $lightBlue: rgb(130, 175, 231);
 
                     h6 {
                         font-size: 16px;
-                        font-weight: 300;
+                        font-weight: 400;
+                        color: darkblue;
                     }
 
                     span {
@@ -297,6 +298,93 @@ $lightBlue: rgb(130, 175, 231);
                             background-color: $lightBlue;
                             color: black;
                         }
+                    }
+                }
+            }
+        }
+
+        // Write
+        .add {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+
+            .content {
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input {
+                    padding: 10px;
+                    border: 1px solid lightgray;
+                }
+
+                .editorContainer {
+                    height: 300px;
+                    overflow: scroll;
+                    border: 1px solid lightgray;
+
+
+                    .editor {
+                        height: 100%;
+                        border: none;
+                    }
+                }
+            }
+
+            .menu {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .item {
+                    border: 1px solid lightgray;
+                    padding: 10px;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    columns: black;
+
+                    h1 {
+                        font-size: 20px;
+                    }
+
+                    .file {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+
+                    .buttons {
+                        display: flex;
+                        justify-content: space-between;
+
+                        :first-child {
+                            cursor: pointer;
+                            color: darkblue;
+                            background-color: white;
+                            border: 1px solid darkblue;
+                            padding: 3px 5px;
+                        }
+
+                        :last-child {
+                            cursor: pointer;
+                            color: white;
+                            background-color: darkblue;
+                            border: 1px solid darkblue;
+                            padding: 3px 5px;
+                        }
+                    }
+
+                    .cat {
+                        display: flex;
+                        align-items: center;
+                        gap: 2px;
+                        color: darkblue;
+                        font-size: 14px;
                     }
                 }
             }
