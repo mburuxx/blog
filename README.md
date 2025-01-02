@@ -1,19 +1,20 @@
-# Notes App
+# Blog Project
 
-## Project Overview
-This web application allows users to create an account, log in, write and save notes, and manage their notes. Users can log in from any device to access, update, or delete their saved notes. The app is built using **Python** (with Flask), **Bootstrap** for frontend styling, and **SQLite** for storing user and note data.
+This is a simple blog project built with [React JS, Node JS and MySQL]. <br/> The project is designed to help users create, read, update, and delete blog posts.
 
 ## Features
-- **User Registration**: Users can create an account by providing a username, password, and email.
-- **User Login/Logout**: Registered users can log in and out securely. User sessions are maintained using Flask's session management.
-- **Create, View, and Edit Notes**: Users can create new notes, view their existing notes, and edit them as needed.
-- **Delete Notes**: Users can delete notes they no longer need.
-- **Cross-Device Access**: Users can log in from different devices and access their saved notes.
-- **Responsive UI**: The user interface is responsive and mobile-friendly, thanks to Bootstrap.
 
-## Technology Stack
-- **Backend**: Python (Flask Framework)
-- **Frontend**: HTML5, CSS3, Bootstrap
-- **Database**: SQLite for storing user credentials and notes
-- **Session Management**: Flask sessions for user login persistence
+- Create blog posts
+- Edit blog posts
+- Delete blog posts
+- View all blog posts
 
+## Installation
+
+Follow these steps to get the project up and running on your local machine.
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/mburuxx/blog.git
+   cd blog
