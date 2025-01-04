@@ -5,9 +5,7 @@ import { AuthContext } from '../context/authContext'
 
 const Navbar = () => {
 
-  const { currentUser } = useContext(AuthContext);
-  console.log("Current User in Navbar:", currentUser); // Debugging
-
+  const { currentUser, logout } = useContext(AuthContext);
 
   return (
     <div className='navbar'>
@@ -33,7 +31,12 @@ const Navbar = () => {
                 </Link>
 
                 <span>{currentUser?.username}</span>
-                <span>Logout</span>
+                {currentUser ? ( 
+                  <span onClick={logout}>Logout</span> 
+                ) : ( 
+                  <Link className='link' to={"/login"}>
+                    Login
+                  </Link> )}
                 <span className="write">
                     <Link className="link" to="/write">Write</Link>
                 </span>

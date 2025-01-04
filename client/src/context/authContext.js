@@ -3,14 +3,13 @@ import { createContext, useEffect, useState } from "react";
 
 export const AuthContext = createContext();
 
-export const AuthContexProvider = ({ children }) => {
+export const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(localStorage.getItem("user")) || null
   );
 
   const login = async(inputs) => {
     const res = await axios.post("/auth/login", inputs);
-    console.log("Login Response:", res.data); // Ensure it's an object
     setCurrentUser(res.data);
   };
 
@@ -21,7 +20,6 @@ export const AuthContexProvider = ({ children }) => {
 
   // Update local storage each time there is a new user
   useEffect(() => {
-    console.log("Current User in Context:", currentUser); // Debugging
     localStorage.setItem("user", JSON.stringify(currentUser));
   }, [currentUser]);
 
