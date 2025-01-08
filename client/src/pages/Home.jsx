@@ -19,35 +19,6 @@ const Home = () => {
     };
     fetchData();
   }, [cat]);
-  // const posts = [
-  //   {
-  //     id: 1,
-  //     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  //     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-  //     img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   },
-
-  //   {
-  //     id: 2,
-  //     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  //     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-  //     img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   },
-
-  //   {
-  //     id: 3,
-  //     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  //     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-  //     img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   },
-
-  //   {
-  //     id: 4,
-  //     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  //     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. A possimus excepturi aliquid nihil cumque ipsam facere aperiam at! Ea dolorem ratione sit debitis deserunt repellendus numquam ab vel perspiciatis corporis!",
-  //     img: "https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   },
-  // ];
 
   return (
     <div className='home'>
@@ -55,7 +26,7 @@ const Home = () => {
         {posts.map((post) => (
           <div className='post' key={post.id}>
             <div className='img'>
-              <img src={post.img} alt=""/>
+              <img src={`../upload/${post.img}`} alt=""/>
             </div>
             <div className='content'>
               <Link className='link' to={`/post/${post.id}`}>
